@@ -1,0 +1,224 @@
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.container {
+    position: relative;
+    max-width: 640px;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+    margin: 20px auto;
+
+    border-radius: 6px;
+    color: #fff;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.word {
+    font-size: 3em;
+    font-weight: bold;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes w1anim {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 0;
+    }
+}
+
+@keyframes w2anim {
+    20% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+}
+
+@keyframes w3anim {
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+@keyframes w4anim {
+    60% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+}
+
+@keyframes w5anim {
+    80% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.w1 {
+    -webkit-animation: w1anim 20s infinite;
+    animation: w1anim 20s infinite;
+}
+
+.w2 {
+    -webkit-animation: w2anim 20s infinite;
+    animation: w2anim 20s infinite;
+}
+
+.w3 {
+    -webkit-animation: w3anim 20s infinite;
+    animation: w3anim 20s infinite;
+}
+
+.w4 {
+    -webkit-animation: w4anim 20s infinite;
+    animation: w4anim 20s infinite;
+}
+
+.w5 {
+    -webkit-animation: w5anim 20s infinite;
+    animation: w5anim 20s infinite;
+}
+
+
+
+@keyframes spin {
+    0% {
+        content: "ipsum";
+    }
+
+    10% {
+        content: "dolor";
+    }
+
+    20% {
+        content: "sit";
+    }
+
+    30% {
+        content: "amet";
+    }
+
+    40% {
+        content: "consectetur";
+    }
+
+    50% {
+        content: "adipisicing";
+    }
+
+    60% {
+        content: "elit";
+    }
+
+    70% {
+        content: "Hic";
+    }
+
+    80% {
+        content: "atque";
+    }
+
+    90% {
+        content: "fuga";
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul.menu {
+    display: inline-block;
+    list-style-type: none;
+}
+
+li.menu_list {
+    height: 85px;
+    width: 85px;
+    position: relative;
+}
+
+li.menu_list .front,
+a.side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86px;
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+li.menu_list .front {
+    background-color: #34465d;
+    color: #f83730;
+    transform-origin: 0 0;
+}
+
+a.side {
+    background-color: #f83730;
+    color: #fcfcfc;
+    transform-origin: 0 0 85px;
+    transform: rotateY(-90deg);
+}
+
+li.menu_list:hover a.side {
+    transform: rotateY(0deg);
+}
+
+li.menu_list:hover .front {
+    transform: rotateY(90deg);
+}
